@@ -1,0 +1,27 @@
+<form #form ="ngForm">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" name ="email"class="form-control" id="email" aria-describedby="emailHelp" placeholder="JohnDoe@gmail.com" ngModel>
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" placeholder="Joe Doe" class="form-label">Fullname</label>
+        <input type="name" name ="username"class="form-control" id="name" placeholder="Joe Doe" ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" placeholder="Password" name ="password" ngModel>
+    </div>
+    <div class="mb-3">
+      <label for="usertype">Usertype</label>
+        <select class="form-control" aria-label="Default select example" name ="usertype" ngModel>
+            <option>Developer</option>
+            <option>Owner</option>
+            
+        </select>
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <h6>{{form.value|json}}</h6>
